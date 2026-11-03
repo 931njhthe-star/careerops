@@ -6,7 +6,7 @@
 <script src="questions-data.js"></script>
 <script>
 const STORE=STUDY_STORAGE_KEY;
-const COURSES={all:null,gpu:[1,2,5,6,9,10,11,13],cv:[3,4,5,7,10,11,13],cpp:[1,2,3,6,9,10,13],robot:[3,4,6,8,9,10,12],ai:[14,15,16,17,18,19],common:[9,20]};
+const COURSES={all:null,gpu:[1,2,5,6,9,10,11,13,22],cv:[3,4,5,7,10,11,13,21,22],cpp:[1,2,3,6,9,10,13],robot:[3,4,6,8,9,10,12],ai:[14,15,16,17,18,19],common:[9,20]};
 let records={};try{records=JSON.parse(localStorage.getItem(STORE)||'{}'); if(!records||typeof records!=='object'||Array.isArray(records))records={}}catch(e){records={}}
 let term='',activeFilter='all',course='all',expanded=new Set();const $=id=>document.getElementById(id);
 function safe(s){return String(s??'').replace(/[&<>"']/g,x=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[x]))}
